@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Logoposter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">LOGOPOSTER</div>
+            <ul class="nav-menu">
+                <li><a href="karya.html">Karya</a></li>
+                <li><a href="tentang.html">Tentang</a></li>
+                <li><a href="index.html">home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content kontak-page">
+        <section class="kontak-hero">
+            <h1>Kontak</h1>
+            <p class="kontak-subtitle">Terhubung dengan kami di media sosial atau kirimkan pesan melalui formulir dibawah ini!</p>
+        </section>
+
+        <section class="kontak-content">
+            <div class="social-media-section">
+                <div class="social-icons">
+                    <a href="#" class="social-icon instagram">
+                        <div class="icon">📷</div>
+                    </a>
+                    <a href="#" class="social-icon youtube">
+                        <div class="icon">📺</div>
+                    </a>
+                    <a href="#" class="social-icon whatsapp">
+                        <div class="icon">💬</div>
+                    </a>
+                </div>
+                <button class="message-button">Kirim Pesan</button>
+            </div>
+
+            <div class="contact-form-section">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjek">Subjek</label>
+                        <input type="text" id="subjek" name="subjek" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="info-container">
+                <h2>Informasi Kontak</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p>hello@logoposter.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>WhatsApp</h3>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Jam Operasional</h3>
+                        <p>Senin - Jumat: 09:00 - 17:00<br>
+                           Sabtu: 09:00 - 15:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2024 Logoposter</p>
+            </div>
+            <div class="footer-right">
+                <a href="index.html">Karya</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.');
+            this.reset();
+        });
+
+        // Message button
+        document.querySelector('.message-button').addEventListener('click', function() {
+            document.querySelector('.contact-form-section').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+    </script>
+</body>
+</html>
